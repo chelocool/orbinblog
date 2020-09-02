@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>{% block titulop %}Orbin{% endblock titulop %}</title>
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/animate.min.css' %}" rel="stylesheet"> 
+  <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/lightbox.css' %}" rel="stylesheet">
+  <link href="{% static 'css/main.css' %}" rel="stylesheet">
+  <link id="css-preset" href="{% static 'css/presets/preset1.css' %}" rel="stylesheet">
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/wasa.css'%}">
+
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+  <![endif]-->
+  
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="{% static 'images/log.ico' %}">
+</head><!--/head-->
+
+<body>
+  
+  <!-- WHATSAPP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <a href="https://api.whatsapp.com/send?phone=+541173609026&text=Hola, ¿En que puedo ayudarte?." class="float" target="_blank">
+  <i class="fa fa-whatsapp my-float"></i>
+  </a>
+  <!-- FIN WHATSAPP-->
+  
+  
+  <!--.preloader-->
+  
+  <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
+  <!--/.preloader-->
+  
+  
+  
+  <header id="home">
+    <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="item active" style="background-image: url({% block imagenp %}{% static 'images/slider/1.jpg' %}{% endblock imagenp %})">
+          <div class="caption">
+            <h1 class="animated fadeInLeftBig">{% block titulopp %}<span>Orbin{% endblock titulopp %}</span></h1>
+            <p class="animated fadeInRightBig">{% block escritop %}Soluciones Integrales{% endblock escritop %}</p>
+            {% block datat %}<a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Comenzar</a>{% endblock datat %}
+          </div>
+        </div>
+        {% block nover %}
+        <div class="item" style="background-image: url({% static 'images/slider/2.jpg' %} )">
+          <div class="caption">
+            <h1 class="animated fadeInLeftBig"><span>DINAMISMO</span></h1>
+            <p class="animated fadeInRightBig">SITIOS AUTOADMINISTRABLES - REDES SOCIALES - LOGOTIPOS</p>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Comenzar</a>
+          </div>
+        </div>
+        <div class="item" style="background-image: url({% static 'images/slider/3.jpg' %} )">
+          <div class="caption">
+            <h1 class="animated fadeInLeftBig"><span>CREATIVIDAD</span></h1>
+            <p class="animated fadeInRightBig">SI PODES IMAGINARLO PODEMOS HACERLO REALIDAD</p>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Comenzar</a>
+          </div>
+        </div>
+      </div>
+      {% endblock nover %}
+
+
+      {% block datatt %}
+      <a class="left-control" href="#home-slider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+      <a class="right-control" href="#home-slider" data-slide="next"><i class="fa fa-angle-right"></i></a>
+      <a id="tohash" href="#services"><i class="fa fa-angle-down"></i></a>
+      {% endblock datatt %}
+    
+    </div><!--/#home-slider-->
+    <div class="main-nav">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{% url 'blog:index' %}">
+            <h1><img class="img-responsive" src="{% static 'images/logo.png' %}" alt="logo"></h1>
+          </a>                    
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">                 
+            <li class="scroll active"><a href="{% url 'blog:index' %}">Home</a></li>
+            <li class="scroll"><a href="#services">Servicios</a></li> 
+            <li class="scroll"><a href="#about-us">Nosotros</a></li>                     
+            <li class="scroll"><a href="#portfolio">Portfolio</a></li>
+            <li class="scroll"><a href="#blog">Blog</a></li>
+            <li class="scroll"><a href="#contact">Contacto</a></li>       
+          </ul>
+        </div>
+      </div>
+    </div><!--/#main-nav-->
+    
+    {% block servicios %}
+
+  </header><!--/#home-->
+  <section id="services">
+    <div class="container">
+      <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+        <div class="row">
+          <div class="text-center col-sm-8 col-sm-offset-2">
+            <h2></h2>
+            <p></p>
+          </div>
+        </div> 
+      </div>
+      <div class="text-center our-services">
+        <div class="row">
+          <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <div class="service-icon">
+              <i class="fa fa-folder"></i>
+            </div>
+            <div class="service-info">
+              <h3>Desarrollo de aplicaciones</h3>
+              <p></p>
+            </div>
+          </div>
+          <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="450ms">
+            <div class="service-icon">
+              <i class="fa fa-life-ring"></i>
+            </div>
+            <div class="service-info">
+              <h3>Soporte 24/7/365</h3>
+              <p></p>
+            </div>
+          </div>
+          <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="550ms">
+            <div class="service-icon">
+              <i class="fa fa-server"></i>
+            </div>
+            <div class="service-info">
+              <h3>Web Hosting</h3>
+              <p></p>
+            </div>
+          </div>
+          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="650ms">
+            <div class="service-icon">
+              <i class="fa fa-users"></i>
+            </div>
+            <div class="service-info">
+              <h3>Blogs</h3>
+              <p></p>
+            </div>
+          </div>
+          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="750ms">
+            <div class="service-icon">
+              <i class="fa fa-tablet"></i>
+            </div>
+            <div class="service-info">
+              <h3>Diseño Responsive</h3>
+              <p></p>
+            </div>
+          </div>
+          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="850ms">
+            <div class="service-icon">
+              <i class="fa fa-hashtag"></i>
+            </div>
+            <div class="service-info">
+              <h3>Community Manager</h3>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!--/#services-->
+
+  {% endblock servicios %}
+
+
+  {% block nosotros %}
+
+  <section id="about-us" class="parallax">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="about-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <h2>Sobre nosotros</h2>
+            <p>Somos una empresa profesional responsable de construir, gestionar y administrar la comunidad online alrededor de una marca en internet, creando y manteniendo relaciones estables y duraderas con sus clientes, sus fans y, en general, cualquier usuario interesado en la marca.</p>
+            <p></p>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="our-skills wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+              <p class="lead">User Experiances</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="95">95%</div>
+              </div>
+            </div>
+            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="400ms">
+              <p class="lead">Web Design</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="75">75%</div>
+              </div>
+            </div>
+            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+              <p class="lead">Programming</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="60">60%</div>
+              </div>
+            </div>
+            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+              <p class="lead">Fun</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="85">85%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!--/#about-us-->
+
+  {% endblock nosotros %}
+
+  {% block port %}
+  
+  <section id="portfolio">
+    <div class="container">
+      <div class="row">
+        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+          <h2>Nuestro Portfolio</h2>
+          <p>Conoce a quienes confiaron en nosotros</p>
+        </div>
+      </div> 
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <div class="folio-image">
+              <img class="img-responsive" src="{% static 'images/portfolio/1.jpg' %} " alt="">
+            </div>
+            <div class="overlay">
+              <div class="overlay-content">
+                <div class="overlay-text">
+                  <div class="folio-info">
+                    <h3>RL Fotografia</h3>
+                    <p></p>
+                  </div>
+                  <div class="folio-overview">
+                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                    <span class="folio-expand"><a href="{% static 'images/portfolio/1.jpg' %} " data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="400ms">
+            <div class="folio-image">
+              <img class="img-responsive" src="{% static 'images/portfolio/2.jpg' %} " alt="">
+            </div>
+            <div class="overlay">
+              <div class="overlay-content">
+                <div class="overlay-text">
+                  <div class="folio-info">
+                    <h3>X2 Gamers</h3>
+                    <p></p>
+                  </div>
+                  <div class="folio-overview">
+                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                    <span class="folio-expand"><a href="{% static 'images/portfolio/2.jpg' %} " data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="500ms">
+            <div class="folio-image">
+              <img class="img-responsive" src="{% static 'images/portfolio/3.jpg' %} " alt="">
+            </div>
+            <div class="overlay">
+              <div class="overlay-content">
+                <div class="overlay-text">
+                  <div class="folio-info">
+                    <h3>Buenos Hábitos</h3>
+                    <p></p>
+                  </div>
+                  <div class="folio-overview">
+                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                    <span class="folio-expand"><a href="{% static 'images/portfolio/3.jpg' %} " data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="600ms">
+            <div class="folio-image">
+              <img class="img-responsive" src="{% static 'images/portfolio/4.jpg' %} " alt="">
+            </div>
+            <div class="overlay">
+              <div class="overlay-content">
+                <div class="overlay-text">
+                  <div class="folio-info">
+                    <h3>Pintureria Corrales</h3>
+                    <p></p>
+                  </div>
+                  <div class="folio-overview">
+                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                    <span class="folio-expand"><a href="{% static 'images/portfolio/4.jpg' %} " data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="700ms">
+            <div class="folio-image">
+              <img class="img-responsive" src="{% static 'images/portfolio/5.jpg' %} " alt="">
+            </div>
+            <div class="overlay">
+              <div class="overlay-content">
+                <div class="overlay-text">
+                  <div class="folio-info">
+                    <h3>Metalúrgica Scassi</h3>
+                    <p></p>
+                  </div>
+                  <div class="folio-overview">
+                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                    <span class="folio-expand"><a href="{% static 'images/portfolio/5.jpg' %}" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="800ms">
+            <div class="folio-image">
+              <img class="img-responsive" src="{% static 'images/portfolio/6.jpg' %} " alt="">
+            </div>
+            <div class="overlay">
+              <div class="overlay-content">
+                <div class="overlay-text">
+                  <div class="folio-info">
+                    <h3>Coconut Radio</h3>
+                    <p></p>
+                  </div>
+                  <div class="folio-overview">
+                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                    <span class="folio-expand"><a href="{% static 'images/portfolio/6.jpg' %} " data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="900ms">
+            <div class="folio-image">
+              <img class="img-responsive" src="{% static 'images/portfolio/7.jpg' %} " alt="">
+            </div>
+            <div class="overlay">
+              <div class="overlay-content">
+                <div class="overlay-text">
+                  <div class="folio-info">
+                    <h3>Romy Nails</h3>
+                    <p></p>
+                  </div>
+                  <div class="folio-overview">
+                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                    <span class="folio-expand"><a href="{% static 'images/portfolio/7.jpg' %} " data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="1000ms">
+            <div class="folio-image">
+              <img class="img-responsive" src="{% static 'images/portfolio/8.jpg' %}" alt="">
+            </div>
+            <div class="overlay">
+              <div class="overlay-content">
+                <div class="overlay-text">
+                  <div class="folio-info">
+                    <h3>Estudio Génova</h3>
+                    <p></p>
+                  </div>
+                  <div class="folio-overview">
+                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                    <span class="folio-expand"><a href="{% static 'images/portfolio/8.jpg' %} " data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="portfolio-single-wrap">
+      <div id="portfolio-single">
+      </div>
+    </div><!-- /#portfolio-single-wrap -->
+  </section><!--/#portfolio-->
+  {% endblock port %}
+
+
+  <section id="blog">
+    <div class="container">
+      <div class="row">
+        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+          {% block contenidob %}
+          {% if posts %}
+          
+          <h2>Blog</h2>
+          <p>Ultimos Posts</p>
+          {% for post in posts %}
+          </div>
+        </div>
+        <div class="blog-posts">
+        <div class="row">
+          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
+            <div class="post-thumb">
+              {% block imagenpp %}<img class="img-responsive" src="{{post.imagen}}" alt=""></a>{% endblock imagenpp %}
+              <div class="entry-header">
+              <h3><a href="{% url 'blog:detalle_post' post.slug %}">{{post.titulo}}</h3>
+              <span class="cetagory">Escrito por <strong>{{post.autor}}</strong></span>
+              <span class="date"> el {{post.fecha_creacion}}</span>
+            </div>
+            {% endfor %}
+            {% else %}
+            <h1>No hay Post</h1>
+            {% endif %}
+            {% endblock contenidob %}  
+            
+    </section><!--/#blog-->
+    <div class="load-more wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">
+            <a href="https://www.instagram.com/orbin.ok/" class="btn-loadmore"><i class="fa fa-repeat"></i>  Mas contenido </a>
+            </div>
+  
+
+{% block contacto %}
+  <section id="contact">
+    <div id="contact-us" class="parallax">
+      <div class="container">
+        <div class="row">
+          <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <h2>Contáctanos</h2>
+            <p>Déjanos tu consulta</p>
+          </div>
+        </div>
+        <div class="contact-form wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
+          <div class="row">
+            <div class="col-sm-6">
+              <form name="contact-form" method="post" action="{% url 'blog:contacto' %}">
+              {% csrf_token %}
+                <div class="row  wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <input type="text" name="name" class="form-control" placeholder="Name" required="required">
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <input type="email" name="email" class="form-control" placeholder="Email Address" required="required">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="text" name="subject" class="form-control" placeholder="Subject" required="required">
+                </div>
+                <div class="form-group">
+                  <textarea name="message" id="message" class="form-control" rows="4" placeholder="Enter your message" required="required"></textarea>
+                </div>                        
+                <div class="form-group">
+                  <button type="submit" class="btn-submit">Send Now</button>
+                </div>
+              </form>   
+            </div>
+            <div class="col-sm-6">
+              <div class="contact-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                <ul class="address">
+                  <li><i class="fa fa-map-marker"></i> <span> Address:</span> 2400 South Avenue A </li>
+                  <li><i class="fa fa-phone"></i> <span> Phone:</span> +928 336 2000  </li>
+                  <li><i class="fa fa-envelope"></i> <span> Email:</span><a href="mailto:someone@yoursite.com"> support@oxygen.com</a></li>
+                  <li><i class="fa fa-globe"></i> <span> Website:</span> <a href="#">www.sitename.com</a></li-->
+                </ul>
+              </div>                            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>        
+  </section><!--/#contact-->
+
+  {% endblock contacto %}
+
+
+  <footer id="footer">
+    <div class="footer-top wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+      <div class="container text-center">
+        <div class="footer-logo">
+          <a href="{% url 'blog:index' %}"><img class="img-responsive" src="{% static 'images/logo.png' %}" alt=""></a>
+        </div>
+        <div class="social-icons">
+          <ul>
+            <li><a class="envelope" href="#"><i class="fa fa-envelope"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li> 
+            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a class="tumblr" href="#"><i class="fa fa-tumblr-square"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <p>&copy; Orbin 2020 </p>
+          </div>
+          <div class="col-sm-6">
+            <!--p class="pull-right">Crafted by <a href="http://designscrazed.org/">Allie</a></p-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script type="text/javascript" src="{% static 'js/jquery.js' %} "></script>
+  <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %} "></script>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+  <script type="text/javascript" src="{% static 'js/jquery.inview.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/wow.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/mousescroll.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/smoothscroll.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/jquery.countTo.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/lightbox.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+  
+</body>
+</html>

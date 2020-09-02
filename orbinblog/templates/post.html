@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+{% load static %}
+
+
+
+{% block titulop %}
+    Blog
+{% endblock titulop %}
+
+
+{% block titulopp %}
+    {{detalle_post.titulo}}
+{% endblock titulopp %}
+
+{% block escritop %}
+    {{detalle_post.autor}}
+{% endblock escritop %}
+
+{% block imagenp %}
+    {{detalle_post.imagen}}   
+{% endblock imagenp %}
+
+{% block contenidob %}
+    <div style="align-content: center;">{{detalle_post.contenido | safe}}</div>
+{% endblock contenidob %}
+
+{% block port %}
+{% endblock port %}
+
+{% block servicios %}
+{% endblock servicios %}
+
+{% block nosotros %}
+{% endblock nosotros %}
+
+{% block contacto %}
+{% endblock contacto %}
+
+{% block nover %}
+{% endblock nover %}
+
+{% block datat %}
+{% endblock datat %}
+
+{% block datatt %}
+{% endblock datatt %}
