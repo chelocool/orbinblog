@@ -40,7 +40,7 @@ class Post(models.Model):
     slug=models.CharField('Slug', max_length=100, null=False, blank=False)
     descipcion=models.CharField('Descripcion', max_length=200, null=False, blank=False)
     contenido=RichTextField()
-    imagen=models.URLField(max_length=200, null=False, blank=False)
+    imagen=models.URLField(max_length=9999, null=False, blank=False)
     autor=models.ForeignKey(Autor, on_delete=models.CASCADE)
     categoria=models.ForeignKey(Categoria, on_delete=models.CASCADE)
     estado=models.BooleanField('Publicado/No Publicado', default=True)
